@@ -98,3 +98,8 @@ span {
 .close-layerMask2:hover {
     color: #f4f4f4;
 }
+css:
+audio {
+    width: 300px;
+    height: 54px;
+}
