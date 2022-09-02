@@ -1,11 +1,11 @@
 /* Tất cả màu bên dưới bạn đều có thể thay đổi được */
 html,
 body {
-    background-color: pink;
     background-repeat: none;
     display: flex;
     align-items: center;
     position: relative;
+    background-image: url("https://game4v.com/8-canh-le-cuoi-nghen-ngao-trong-anime-741101.g4v");
 }
 .firstclk {
     font-weight: 500;
@@ -19,7 +19,6 @@ body {
     width: 100%;
     height: 100%;
     z-index: 1;
-    background-color: pink;
     background-size: cover;
     background-repeat: none;
 }
