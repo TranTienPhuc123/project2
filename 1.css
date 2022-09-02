@@ -30,16 +30,6 @@ body {
     background-size: cover;
     background-repeat: none;
 }
-
-.layerMask2 {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 2;
-    background-color: pink;
-    background-size: cover;
-    background-repeat: repeat-y;
-}
 .box {
     position: relative;
     display: inline-block;
