@@ -23,6 +23,7 @@ body {
 	background-image: url("./img/bg2.jpg");
 	background-size: cover;
     background-repeat: none;
+	background-color: black;
 }
 span {
 	display: inline-block;
