@@ -2,7 +2,7 @@
 html,
 body {
     background-color: pink;
-    background-size: cover;
+    background-size: 100%;
     background-repeat: none;
     display: flex;
     align-items: center;
