@@ -40,25 +40,6 @@ body {
     background-size: cover;
     background-repeat: repeat-y;
 }
-
-.Description .sup {
-    display: inline-block;
-    color: #ea4335;
-}
-.drawHeart img {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-}
-span {
-    display: inline-block;
-    white-space: pre;
-}
-
-.Description .sup:hover {
-    color: #ffb8c0;
-}
-
 .box {
     position: relative;
     display: inline-block;
