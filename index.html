@@ -1,141 +1,256 @@
-<!DOCTYPE html>
 <html lang="en">
-
 <head>
-	<meta charset="UTF-8">
-	<title>Gui Minh Thanh</title>
-	<link rel="shortcut icon" href="./img/heart.png" type="image/x-icon" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	<link href="https://fonts.googleapis.com/css?family=Dancing+Script:700" rel="stylesheet">
-	<link rel="stylesheet" href="1.css">
-	<link href="https://fonts.googleapis.com/css?family=Sacramento" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-	<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html, body {
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            background: #000;
+        }
+        canvas {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+        div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: yellow;
+            font-size: 50px;
+            height: 100%;
+        }
+    </style>
 </head>
-
 <body>
-	<div class="container">
-		<div class="row mt-5 main">
-			<div class="col-12 text-center">
+    <canvas id="pinkboard">
+        
+    </canvas>
+    <div>L.T.M.THANH</div>
+    <script>
 
-				<div class="firstclk text-center"  style="font-size: 18pt;color: #DDA0DD;font-family: 'Dancing Script', cursive;">
-					<p><i><u>L.T.M.Thanh </i></u></p>
-				</div>
-
-
-				<div class="drawHeart mt-4">
-					<svg id="Layer_1" class="heart" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
-						viewBox="0 0 1364 277.28">
-						<defs>
-							<style>
-								.cls-a {
-									fill: none;
-									stroke: #ea4335;
-									stroke-miterlimit: 10;
-								}
-
-								.cls-b {
-									fill: none;
-									stroke: #ea4335;
-									stroke-miterlimit: 10;
-								}
-
-								.cls-2 {
-									fill: #ed5956;
-								}
-
-								.cls-3 {
-									fill: #ea4335;
-								}
-							</style>
-						</defs>
-						<path id="tim" class="cls-a"
-							d="M685.11,222.53,588.67,119.89a74,74,0,0,1-20.38-49.81c-.55-59.75,72.35-84.8,118.8-28.4C747-34.6,826.25,34.44,801.72,94.45a63.52,63.52,0,0,1-13,19.73Z"
-							transform="translate(-2.5 -6.47)" />
-						<polyline class="cls-b"
-							points="1364 216.05 1281 216.05 1271 170.05 1241 274.05 1214 118.05 1183 262.05 1174 216.05 684 216.05 195 216.05 186 263.05 155 119.05 128 275.05 98 171.05 88 216.05 0 216.05" />
-						<g id="_timmau_" class="timmau" data-name="&lt;timmau&gt;">
-							<path class="cls-2"
-								d="M802.5,93.92a64.12,64.12,0,0,1-13.17,20L686,222v-182c.17.2.34.39.5.59C747.08-36.66,827.33,33.2,802.5,93.92Z"
-								transform="translate(-2.5 -6.47)" />
-							<path class="cls-3"
-								d="M569.5,93.92a64.12,64.12,0,0,0,13.17,20L686,222v-182c-.17.2-.34.39-.5.59C624.92-36.66,544.67,33.2,569.5,93.92Z"
-								transform="translate(-2.5 -6.47)" />
-						</g>
-					</svg>
-				</div>
-
-				<div class="Description mt-5 text-center">
-					<div class="sup btn btn-outline-danger" data-toggle="modal" data-target="#myModal"></div>
-					<div class="modal fade" id="myModal">
-						<div class="modal-dialog">
-							<div class="modal-content">
-
-								<div class="modal-header">
-									<p class="modal-title text-danger"></p>
-									<button type="button" class="close" data-dismiss="modal">&times;</button>
-								</div>
-
-								<div class="modal-body text-danger"></div>
-
-								<div class="modal-footer">
-									<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-								</div>
-
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="layerMask">
-		<div class="container">
-			<div class="row">
-				<div class="col-12">
-		
-                             
-				         <svg width="1117.7px" height="122px" xmlns="http://www.w3.org/2000/svg" viewBox="-308.85 14 1117.7 122" style="background: rgba(0, 0, 0, 0);" preserveAspectRatio="xMidYMid"><defs><linearGradient id="editing-outline-gradient" x1="-0.41354545764260087" x2="1.4135454576426008" y1="0.09326335692419985" y2="0.9067366430758002"><stop offset="0" stop-color="#ee4208"></stop><stop offset="1" stop-color="#4139ff"></stop></linearGradient><filter id="editing-outline" x="-100%" y="-100%" width="300%" height="300%"><feMorphology in="SourceGraphic" operator="dilate" radius="1" result="outline"></feMorphology><feComposite operator="out" in="outline" in2="SourceAlpha"></feComposite></filter></defs><g filter="url(#editing-outline)"><g transform="translate(-153.55500733852386, 106.01000022888184)"><path d="M34.50-13.25L34.50-13.25L34.50-13.25Q36.16-12.03 36.16-9.44L36.16-9.44L36.16-9.44Q36.16-6.85 35.04-5.02L35.04-5.02L35.04-5.02Q33.92-3.20 31.74-1.79L31.74-1.79L31.74-1.79Q27.07 1.22 18.91 1.22L18.91 1.22L18.91 1.22Q10.75 1.22 6.30-3.04L6.30-3.04L6.30-3.04Q1.86-7.30 1.86-14.85L1.86-14.85L1.86-14.85Q1.86-25.54 7.42-33.66L7.42-33.66L7.42-33.66Q11.65-39.68 19.20-42.24L19.20-42.24L19.20-42.24Q23.10-43.52 26.94-43.52L26.94-43.52L26.94-43.52Q30.78-43.52 33.15-43.01L33.15-43.01L33.15-43.01Q35.52-42.50 37.31-41.47L37.31-41.47L37.31-41.47Q41.22-39.23 41.22-35.65L41.22-35.65L41.22-35.65Q41.22-32.38 38.14-29.95L38.14-29.95L38.14-29.95Q35.33-27.78 33.02-27.78L33.02-27.78L33.02-27.78Q30.72-27.78 29.76-28.10L29.76-28.10L29.76-28.10Q30.02-30.40 30.02-31.90L30.02-31.90L30.02-31.90Q30.02-33.41 29.95-34.50L29.95-34.50L29.95-34.50Q29.89-35.58 29.57-36.61L29.57-36.61L29.57-36.61Q28.93-38.98 26.98-38.98L26.98-38.98L26.98-38.98Q25.02-38.98 23.07-37.15L23.07-37.15L23.07-37.15Q21.12-35.33 19.46-32.26L19.46-32.26L19.46-32.26Q15.68-25.28 15.68-17.02L15.68-17.02L15.68-17.02Q15.68-13.06 17.92-10.78L17.92-10.78L17.92-10.78Q20.16-8.51 24.96-8.51L24.96-8.51L24.96-8.51Q28.54-8.51 31.94-10.88L31.94-10.88L31.94-10.88Q33.41-11.90 34.50-13.25ZM73.66-7.10L73.66-7.10L73.66-7.10Q73.66-4.29 76.54-3.46L76.54-3.46L76.54-3.46Q75.84-1.09 73.09 0.19L73.09 0.19L73.09 0.19Q70.78 1.28 68.26 1.28L68.26 1.28L68.26 1.28Q65.73 1.28 64.42 0.61L64.42 0.61L64.42 0.61Q63.10-0.06 62.40-1.15L62.40-1.15L62.40-1.15Q61.25-2.82 61.25-5.95L61.25-5.95L61.25-5.95Q61.25-7.81 62.27-12.93L62.27-12.93L63.17-17.79L63.17-17.79Q64.26-23.36 64.26-25.41L64.26-25.41L64.26-25.41Q64.26-28.99 62.27-28.99L62.27-28.99L62.27-28.99Q59.78-28.99 58.18-25.34L58.18-25.34L58.18-25.34Q57.54-23.94 57.09-21.82L57.09-21.82L52.74 0L39.87 1.28L48.90-44.80L61.76-46.08L61.25-43.52L61.25-43.52Q59.46-33.66 57.92-30.34L57.92-30.34L57.92-30.34Q61.50-33.92 68.10-33.92L68.10-33.92L68.10-33.92Q75.07-33.92 76.35-29.31L76.35-29.31L76.35-29.31Q76.80-27.84 76.80-26.56L76.80-26.56L76.80-26.56Q76.80-25.28 76.70-24.29L76.70-24.29L76.70-24.29Q76.61-23.30 76.29-21.50L76.29-21.50L75.46-16.90L73.98-9.66L73.98-9.66Q73.66-8.19 73.66-7.10ZM84.51-1.92L84.51-1.92L84.51-1.92Q83.01-3.58 82.34-6.21L82.34-6.21L82.34-6.21Q81.66-8.83 81.66-13.12L81.66-13.12L81.66-13.12Q81.66-17.41 83.14-21.31L83.14-21.31L83.14-21.31Q84.61-25.22 87.30-28.03L87.30-28.03L87.30-28.03Q92.80-33.92 101.89-33.92L101.89-33.92L101.89-33.92Q105.15-33.92 107.52-32.83L107.52-32.83L118.46-33.92L113.73-8.96L113.73-8.96Q113.54-8.19 113.54-6.78L113.54-6.78L113.54-6.78Q113.54-5.38 114.40-4.48L114.40-4.48L114.40-4.48Q115.26-3.58 116.54-3.46L116.54-3.46L116.54-3.46Q115.90-1.28 113.57 0L113.57 0L113.57 0Q111.23 1.28 108.61 1.28L108.61 1.28L108.61 1.28Q105.98 1.28 104.22 0.29L104.22 0.29L104.22 0.29Q102.46-0.70 101.95-2.37L101.95-2.37L101.95-2.37Q100.93-0.77 98.75 0.26L98.75 0.26L98.75 0.26Q96.58 1.28 93.66 1.28L93.66 1.28L93.66 1.28Q90.75 1.28 88.38 0.51L88.38 0.51L88.38 0.51Q86.02-0.26 84.51-1.92ZM98.02-27.90L98.02-27.90L98.02-27.90Q97.28-26.75 96.64-24.80L96.64-24.80L96.64-24.80Q96-22.85 94.94-17.63L94.94-17.63L94.94-17.63Q93.89-12.42 93.89-8.70L93.89-8.70L93.89-8.70Q93.89-4.99 94.46-3.90L94.46-3.90L94.46-3.90Q95.04-2.82 96.06-2.82L96.06-2.82L96.06-2.82Q98.11-2.82 99.62-4.77L99.62-4.77L99.62-4.77Q101.12-6.72 101.70-10.18L101.70-10.18L105.09-28.93L105.09-28.93Q103.74-30.08 102.18-30.08L102.18-30.08L102.18-30.08Q100.61-30.08 99.68-29.57L99.68-29.57L99.68-29.57Q98.75-29.06 98.02-27.90ZM94.78-42.11L94.78-42.11L94.78-42.11Q94.02-43.26 94.02-44.74L94.02-44.74L94.02-44.74Q94.02-48.13 96.32-49.02L96.32-49.02L111.42-39.68L110.08-36.61L102.21-38.08L102.21-38.08Q96.83-39.04 94.78-42.11ZM135.62 1.28L135.62 1.28L135.62 1.28Q121.54 1.28 121.54-11.97L121.54-11.97L121.54-11.97Q121.54-21.38 126.72-27.46L126.72-27.46L126.72-27.46Q132.22-33.92 141.76-33.92L141.76-33.92L141.76-33.92Q148.67-33.92 152.19-30.72L152.19-30.72L152.19-30.72Q155.71-27.52 155.71-20.80L155.71-20.80L155.71-20.80Q155.71-10.56 150.21-4.61L150.21-4.61L150.21-4.61Q144.83 1.28 135.62 1.28ZM137.28-26.56L137.28-26.56L137.28-26.56Q136.51-24.83 135.90-22.24L135.90-22.24L135.90-22.24Q135.30-19.65 134.53-15.55L134.53-15.55L134.53-15.55Q133.76-11.46 133.76-6.40L133.76-6.40L133.76-6.40Q133.76-4.74 134.30-3.65L134.30-3.65L134.30-3.65Q134.85-2.56 136.32-2.56L136.32-2.56L136.32-2.56Q137.79-2.56 138.72-3.26L138.72-3.26L138.72-3.26Q139.65-3.97 140.35-5.63L140.35-5.63L140.35-5.63Q141.63-8.58 142.66-14.05L142.66-14.05L142.66-14.05Q143.68-19.52 143.78-21.89L143.78-21.89L143.78-21.89Q143.87-24.26 143.87-26.02L143.87-26.02L143.87-26.02Q143.87-27.78 143.36-28.93L143.36-28.93L143.36-28.93Q142.85-30.08 141.41-30.08L141.41-30.08L141.41-30.08Q139.97-30.08 139.01-29.18L139.01-29.18L139.01-29.18Q138.05-28.29 137.28-26.56ZM206.08-13.25L206.08-13.25L206.08-13.25Q207.74-12.03 207.74-9.44L207.74-9.44L207.74-9.44Q207.74-6.85 206.62-5.02L206.62-5.02L206.62-5.02Q205.50-3.20 203.33-1.79L203.33-1.79L203.33-1.79Q198.66 1.22 190.50 1.22L190.50 1.22L190.50 1.22Q182.34 1.22 177.89-3.04L177.89-3.04L177.89-3.04Q173.44-7.30 173.44-14.85L173.44-14.85L173.44-14.85Q173.44-25.54 179.01-33.66L179.01-33.66L179.01-33.66Q183.23-39.68 190.78-42.24L190.78-42.24L190.78-42.24Q194.69-43.52 198.53-43.52L198.53-43.52L198.53-43.52Q202.37-43.52 204.74-43.01L204.74-43.01L204.74-43.01Q207.10-42.50 208.90-41.47L208.90-41.47L208.90-41.47Q212.80-39.23 212.80-35.65L212.80-35.65L212.80-35.65Q212.80-32.38 209.73-29.95L209.73-29.95L209.73-29.95Q206.91-27.78 204.61-27.78L204.61-27.78L204.61-27.78Q202.30-27.78 201.34-28.10L201.34-28.10L201.34-28.10Q201.60-30.40 201.60-31.90L201.60-31.90L201.60-31.90Q201.60-33.41 201.54-34.50L201.54-34.50L201.54-34.50Q201.47-35.58 201.15-36.61L201.15-36.61L201.15-36.61Q200.51-38.98 198.56-38.98L198.56-38.98L198.56-38.98Q196.61-38.98 194.66-37.15L194.66-37.15L194.66-37.15Q192.70-35.33 191.04-32.26L191.04-32.26L191.04-32.26Q187.26-25.28 187.26-17.02L187.26-17.02L187.26-17.02Q187.26-13.06 189.50-10.78L189.50-10.78L189.50-10.78Q191.74-8.51 196.54-8.51L196.54-8.51L196.54-8.51Q200.13-8.51 203.52-10.88L203.52-10.88L203.52-10.88Q204.99-11.90 206.08-13.25ZM227.01 1.28L227.01 1.28L227.01 1.28Q212.93 1.28 212.93-11.97L212.93-11.97L212.93-11.97Q212.93-21.38 218.11-27.46L218.11-27.46L218.11-27.46Q223.62-33.92 233.15-33.92L233.15-33.92L233.15-33.92Q240.06-33.92 243.58-30.72L243.58-30.72L243.58-30.72Q247.10-27.52 247.10-20.80L247.10-20.80L247.10-20.80Q247.10-10.56 241.60-4.61L241.60-4.61L241.60-4.61Q236.22 1.28 227.01 1.28ZM228.67-26.56L228.67-26.56L228.67-26.56Q227.90-24.83 227.30-22.24L227.30-22.24L227.30-22.24Q226.69-19.65 225.92-15.55L225.92-15.55L225.92-15.55Q225.15-11.46 225.15-6.40L225.15-6.40L225.15-6.40Q225.15-4.74 225.70-3.65L225.70-3.65L225.70-3.65Q226.24-2.56 227.71-2.56L227.71-2.56L227.71-2.56Q229.18-2.56 230.11-3.26L230.11-3.26L230.11-3.26Q231.04-3.97 231.74-5.63L231.74-5.63L231.74-5.63Q233.02-8.58 234.05-14.05L234.05-14.05L234.05-14.05Q235.07-19.52 235.17-21.89L235.17-21.89L235.17-21.89Q235.26-24.26 235.26-26.02L235.26-26.02L235.26-26.02Q235.26-27.78 234.75-28.93L234.75-28.93L234.75-28.93Q234.24-30.08 232.80-30.08L232.80-30.08L232.80-30.08Q231.36-30.08 230.40-29.18L230.40-29.18L230.40-29.18Q229.44-28.29 228.67-26.56ZM225.09-36.86L222.98-40.83L235.46-49.15L245.25-40.77L242.05-36.86L234.56-41.47L225.09-36.86ZM277.95 1.28L277.95 1.28L277.95 1.28Q270.21 1.28 270.21-4.74L270.21-4.74L270.21-4.74Q270.27-6.40 270.78-9.22L270.78-9.22L271.94-15.10L271.94-15.10Q273.66-23.42 273.66-25.28L273.66-25.28L273.66-25.28Q273.66-28.99 271.49-28.99L271.49-28.99L271.49-28.99Q267.84-28.99 265.92-19.46L265.92-19.46L262.14 0L249.28 1.28L255.94-32.70L266.43-33.92L265.41-27.65L265.41-27.65Q268.42-33.92 277.63-33.92L277.63-33.92L277.63-33.92Q282.11-33.92 284-32.03L284-32.03L284-32.03Q285.89-30.14 285.89-25.92L285.89-25.92L285.89-25.92Q285.89-21.95 283.84-12.67L283.84-12.67L283.84-12.67Q282.88-8.51 282.88-6.94L282.88-6.94L282.88-6.94Q282.88-5.38 283.74-4.48L283.74-4.48L283.74-4.48Q284.61-3.58 285.89-3.46L285.89-3.46L285.89-3.46Q285.25-1.28 283.04 0L283.04 0L283.04 0Q280.83 1.28 277.95 1.28ZM295.55-26.75L295.55-26.75L295.55-26.75Q297.73-29.82 301.02-31.87L301.02-31.87L301.02-31.87Q304.32-33.92 308.35-33.92L308.35-33.92L308.35-33.92Q312.38-33.92 314.30-32.64L314.30-32.64L326.85-33.92L322.50-9.34L322.50-9.34Q320.26 3.20 315.52 8.13L315.52 8.13L315.52 8.13Q310.98 12.80 302.14 12.80L302.14 12.80L302.14 12.80Q295.42 12.80 291.58 10.69L291.58 10.69L291.58 10.69Q287.74 8.58 287.74 5.06L287.74 5.06L287.74 5.06Q287.74 2.43 289.73 0.93L289.73 0.93L289.73 0.93Q291.71-0.58 294.78-0.58L294.78-0.58L294.78-0.58Q297.47-0.58 299.52 0.64L299.52 0.64L299.52 0.64Q300.74 1.28 301.31 2.18L301.31 2.18L301.31 2.18Q299.84 3.46 299.84 5.57L299.84 5.57L299.84 5.57Q299.84 8.32 302.40 8.32L302.40 8.32L302.40 8.32Q306.69 8.32 309.12-1.79L309.12-1.79L309.12-1.79Q309.82-4.54 310.40-7.30L310.40-7.30L310.40-7.30Q307.52-3.78 300.99-3.78L300.99-3.78L300.99-3.78Q296.45-3.78 293.82-5.95L293.82-5.95L293.82-5.95Q291.20-8.13 291.20-13.25L291.20-13.25L291.20-13.25Q291.20-16.45 292.29-20.06L292.29-20.06L292.29-20.06Q293.38-23.68 295.55-26.75ZM303.87-13.06L303.87-13.06L303.87-13.06Q303.87-8.70 306.11-8.70L306.11-8.70L306.11-8.70Q307.65-8.70 309.12-10.37L309.12-10.37L309.12-10.37Q310.27-11.71 310.72-13.70L310.72-13.70L313.98-30.14L313.98-30.14Q313.66-30.21 313.34-30.34L313.34-30.34L313.34-30.34Q312.70-30.59 311.87-30.59L311.87-30.59L311.87-30.59Q307.97-30.59 305.66-24.19L305.66-24.19L305.66-24.19Q303.87-19.20 303.87-13.06ZM375.94-13.25L375.94-13.25L375.94-13.25Q377.60-12.03 377.60-9.44L377.60-9.44L377.60-9.44Q377.60-6.85 376.48-5.02L376.48-5.02L376.48-5.02Q375.36-3.20 373.18-1.79L373.18-1.79L373.18-1.79Q368.51 1.22 360.35 1.22L360.35 1.22L360.35 1.22Q352.19 1.22 347.74-3.04L347.74-3.04L347.74-3.04Q343.30-7.30 343.30-14.85L343.30-14.85L343.30-14.85Q343.30-25.54 348.86-33.66L348.86-33.66L348.86-33.66Q353.09-39.68 360.64-42.24L360.64-42.24L360.64-42.24Q364.54-43.52 368.38-43.52L368.38-43.52L368.38-43.52Q372.22-43.52 374.59-43.01L374.59-43.01L374.59-43.01Q376.96-42.50 378.75-41.47L378.75-41.47L378.75-41.47Q382.66-39.23 382.66-35.65L382.66-35.65L382.66-35.65Q382.66-32.38 379.58-29.95L379.58-29.95L379.58-29.95Q376.77-27.78 374.46-27.78L374.46-27.78L374.46-27.78Q372.16-27.78 371.20-28.10L371.20-28.10L371.20-28.10Q371.46-30.40 371.46-31.90L371.46-31.90L371.46-31.90Q371.46-33.41 371.39-34.50L371.39-34.50L371.39-34.50Q371.33-35.58 371.01-36.61L371.01-36.61L371.01-36.61Q370.37-38.98 368.42-38.98L368.42-38.98L368.42-38.98Q366.46-38.98 364.51-37.15L364.51-37.15L364.51-37.15Q362.56-35.33 360.90-32.26L360.90-32.26L360.90-32.26Q357.12-25.28 357.12-17.02L357.12-17.02L357.12-17.02Q357.12-13.06 359.36-10.78L359.36-10.78L359.36-10.78Q361.60-8.51 366.40-8.51L366.40-8.51L366.40-8.51Q369.98-8.51 373.38-10.88L373.38-10.88L373.38-10.88Q374.85-11.90 375.94-13.25ZM415.10-7.10L415.10-7.10L415.10-7.10Q415.10-4.29 417.98-3.46L417.98-3.46L417.98-3.46Q417.28-1.09 414.53 0.19L414.53 0.19L414.53 0.19Q412.22 1.28 409.70 1.28L409.70 1.28L409.70 1.28Q407.17 1.28 405.86 0.61L405.86 0.61L405.86 0.61Q404.54-0.06 403.84-1.15L403.84-1.15L403.84-1.15Q402.69-2.82 402.69-5.95L402.69-5.95L402.69-5.95Q402.69-7.81 403.71-12.93L403.71-12.93L404.61-17.79L404.61-17.79Q405.70-23.36 405.70-25.41L405.70-25.41L405.70-25.41Q405.70-28.99 403.71-28.99L403.71-28.99L403.71-28.99Q401.22-28.99 399.62-25.34L399.62-25.34L399.62-25.34Q398.98-23.94 398.53-21.82L398.53-21.82L394.18 0L381.31 1.28L390.34-44.80L403.20-46.08L402.69-43.52L402.69-43.52Q400.90-33.66 399.36-30.34L399.36-30.34L399.36-30.34Q402.94-33.92 409.54-33.92L409.54-33.92L409.54-33.92Q416.51-33.92 417.79-29.31L417.79-29.31L417.79-29.31Q418.24-27.84 418.24-26.56L418.24-26.56L418.24-26.56Q418.24-25.28 418.14-24.29L418.14-24.29L418.14-24.29Q418.05-23.30 417.73-21.50L417.73-21.50L416.90-16.90L415.42-9.66L415.42-9.66Q415.10-8.19 415.10-7.10ZM443.71-2.69L443.71-2.69L443.71-2.69Q440.64 1.28 433.02 1.28L433.02 1.28L433.02 1.28Q429.06 1.28 426.18-1.12L426.18-1.12L426.18-1.12Q423.30-3.52 423.30-6.98L423.30-6.98L423.30-6.98Q423.30-8.90 423.49-9.86L423.49-9.86L427.78-32.64L440.77-33.92L436.10-9.22L436.10-9.22Q435.84-7.81 435.84-6.98L435.84-6.98L435.84-6.98Q435.84-3.26 438.08-3.26L438.08-3.26L438.08-3.26Q440.58-3.26 442.37-6.66L442.37-6.66L442.37-6.66Q442.94-7.74 443.20-9.15L443.20-9.15L447.74-32.64L460.35-33.92L455.62-8.96L455.62-8.96Q455.42-8 455.42-6.98L455.42-6.98L455.42-6.98Q455.42-5.95 456.00-4.83L456.00-4.83L456.00-4.83Q456.58-3.71 458.43-3.46L458.43-3.46L458.43-3.46Q458.05-1.92 456.70-0.90L456.70-0.90L456.70-0.90Q453.89 1.28 450.85 1.28L450.85 1.28L450.85 1.28Q447.81 1.28 446.02 0.19L446.02 0.19L446.02 0.19Q444.22-0.90 443.71-2.69ZM440.32-39.87L455.42-49.22L455.42-49.22Q457.73-48.32 457.73-44.99L457.73-44.99L457.73-44.99Q457.73-42.18 455.04-40.38L455.04-40.38L455.04-40.38Q452.80-38.85 449.54-38.27L449.54-38.27L441.66-36.80L440.32-39.87ZM466.34-1.92L466.34-1.92L466.34-1.92Q464.83-3.58 464.16-6.21L464.16-6.21L464.16-6.21Q463.49-8.83 463.49-13.12L463.49-13.12L463.49-13.12Q463.49-17.41 464.96-21.31L464.96-21.31L464.96-21.31Q466.43-25.22 469.12-28.03L469.12-28.03L469.12-28.03Q474.62-33.92 483.71-33.92L483.71-33.92L483.71-33.92Q486.98-33.92 489.34-32.83L489.34-32.83L500.29-33.92L495.55-8.96L495.55-8.96Q495.36-8.19 495.36-6.78L495.36-6.78L495.36-6.78Q495.36-5.38 496.22-4.48L496.22-4.48L496.22-4.48Q497.09-3.58 498.37-3.46L498.37-3.46L498.37-3.46Q497.73-1.28 495.39 0L495.39 0L495.39 0Q493.06 1.28 490.43 1.28L490.43 1.28L490.43 1.28Q487.81 1.28 486.05 0.29L486.05 0.29L486.05 0.29Q484.29-0.70 483.78-2.37L483.78-2.37L483.78-2.37Q482.75-0.77 480.58 0.26L480.58 0.26L480.58 0.26Q478.40 1.28 475.49 1.28L475.49 1.28L475.49 1.28Q472.58 1.28 470.21 0.51L470.21 0.51L470.21 0.51Q467.84-0.26 466.34-1.92ZM479.84-27.90L479.84-27.90L479.84-27.90Q479.10-26.75 478.46-24.80L478.46-24.80L478.46-24.80Q477.82-22.85 476.77-17.63L476.77-17.63L476.77-17.63Q475.71-12.42 475.71-8.70L475.71-8.70L475.71-8.70Q475.71-4.99 476.29-3.90L476.29-3.90L476.29-3.90Q476.86-2.82 477.89-2.82L477.89-2.82L477.89-2.82Q479.94-2.82 481.44-4.77L481.44-4.77L481.44-4.77Q482.94-6.72 483.52-10.18L483.52-10.18L486.91-28.93L486.91-28.93Q485.57-30.08 484.00-30.08L484.00-30.08L484.00-30.08Q482.43-30.08 481.50-29.57L481.50-29.57L481.50-29.57Q480.58-29.06 479.84-27.90ZM530.18 0L516.22 0L524.35-42.24L538.43-42.24L530.18 0ZM568.32-3.52L568.32-3.52L568.32-3.52Q566.34 1.28 560 1.28L560 1.28L560 1.28Q556.80 1.28 554.75-0.96L554.75-0.96L554.75-0.96Q553.09-2.82 553.09-4.93L553.09-4.93L553.09-4.93Q553.09-9.73 555.33-20.22L555.33-20.22L560-44.80L572.99-46.08L566.78-13.70L566.78-13.70Q565.70-8.96 565.70-7.30L565.70-7.30L565.70-7.30Q565.70-3.65 568.32-3.52ZM587.71 1.28L587.71 1.28L587.71 1.28Q573.63 1.28 573.63-11.97L573.63-11.97L573.63-11.97Q573.63-21.38 578.82-27.46L578.82-27.46L578.82-27.46Q584.32-33.92 593.86-33.92L593.86-33.92L593.86-33.92Q600.77-33.92 604.29-30.72L604.29-30.72L604.29-30.72Q607.81-27.52 607.81-20.80L607.81-20.80L607.81-20.80Q607.81-10.56 602.30-4.61L602.30-4.61L602.30-4.61Q596.93 1.28 587.71 1.28ZM589.38-26.56L589.38-26.56L589.38-26.56Q588.61-24.83 588-22.24L588-22.24L588-22.24Q587.39-19.65 586.62-15.55L586.62-15.55L586.62-15.55Q585.86-11.46 585.86-6.40L585.86-6.40L585.86-6.40Q585.86-4.74 586.40-3.65L586.40-3.65L586.40-3.65Q586.94-2.56 588.42-2.56L588.42-2.56L588.42-2.56Q589.89-2.56 590.82-3.26L590.82-3.26L590.82-3.26Q591.74-3.97 592.45-5.63L592.45-5.63L592.45-5.63Q593.73-8.58 594.75-14.05L594.75-14.05L594.75-14.05Q595.78-19.52 595.87-21.89L595.87-21.89L595.87-21.89Q595.97-24.26 595.97-26.02L595.97-26.02L595.97-26.02Q595.97-27.78 595.46-28.93L595.46-28.93L595.46-28.93Q594.94-30.08 593.50-30.08L593.50-30.08L593.50-30.08Q592.06-30.08 591.10-29.18L591.10-29.18L591.10-29.18Q590.14-28.29 589.38-26.56ZM634.82-31.55L634.82-31.55L634.82-31.55Q636.93-33.92 640.58-33.92L640.58-33.92L640.58-33.92Q642.82-33.92 644.54-32.70L644.54-32.70L644.54-32.70Q646.27-31.49 646.27-29.22L646.27-29.22L646.27-29.22Q646.27-26.94 645.57-24.51L645.57-24.51L645.57-24.51Q644.86-22.08 643.78-19.58L643.78-19.58L643.78-19.58Q641.60-14.72 638.59-10.69L638.59-10.69L638.59-10.69Q634.37-4.86 630.30-1.79L630.30-1.79L630.30-1.79Q626.24 1.28 621.82 1.28L621.82 1.28L621.82 1.28Q618.24 1.28 616.06 0.45L616.06 0.45L616.06 0.45Q615.68-12.99 615.20-17.79L615.20-17.79L615.20-17.79Q614.72-22.59 614.34-25.22L614.34-25.22L614.34-25.22Q613.70-30.34 611.78-31.55L611.78-31.55L611.78-31.55Q613.25-32.83 614.69-33.38L614.69-33.38L614.69-33.38Q616.13-33.92 619.10-33.92L619.10-33.92L619.10-33.92Q622.08-33.92 624.19-31.58L624.19-31.58L624.19-31.58Q626.30-29.25 626.72-25.12L626.72-25.12L626.72-25.12Q627.14-20.99 627.14-16L627.14-16L627.14-16Q627.14-11.01 626.75-4.99L626.75-4.99L626.75-4.99Q628.74-6.40 630.85-10.69L630.85-10.69L630.85-10.69Q633.73-16.64 634.75-23.81L634.75-23.81L634.75-23.81Q635.07-25.98 635.07-28.29L635.07-28.29L635.07-28.29Q635.07-30.59 634.82-31.55ZM673.92-10.82L673.92-10.82L673.92-10.82Q675.52-9.73 675.52-7.33L675.52-7.33L675.52-7.33Q675.52-4.93 674.30-3.39L674.30-3.39L674.30-3.39Q673.09-1.86 671.10-0.83L671.10-0.83L671.10-0.83Q667.01 1.28 662.59 1.28L662.59 1.28L662.59 1.28Q658.18 1.28 655.58 0.32L655.58 0.32L655.58 0.32Q652.99-0.64 651.26-2.43L651.26-2.43L651.26-2.43Q647.87-5.82 647.87-12.03L647.87-12.03L647.87-12.03Q647.87-21.70 653.12-27.58L653.12-27.58L653.12-27.58Q658.75-33.92 668.54-33.92L668.54-33.92L668.54-33.92Q674.62-33.92 677.63-31.36L677.63-31.36L677.63-31.36Q679.87-29.44 679.87-26.30L679.87-26.30L679.87-26.30Q679.87-15.04 660.42-15.04L660.42-15.04L660.42-15.04Q660.16-13.38 660.16-11.97L660.16-11.97L660.16-11.97Q660.16-9.02 661.47-7.90L661.47-7.90L661.47-7.90Q662.78-6.78 665.22-6.78L665.22-6.78L665.22-6.78Q667.65-6.78 670.24-7.90L670.24-7.90L670.24-7.90Q672.83-9.02 673.92-10.82ZM660.86-17.79L660.86-17.79L660.86-17.79Q665.41-17.79 668.03-20.61L668.03-20.61L668.03-20.61Q670.66-23.30 670.66-27.58L670.66-27.58L670.66-27.58Q670.66-29.06 670.11-29.86L670.11-29.86L670.11-29.86Q669.57-30.66 668.48-30.66L668.48-30.66L668.48-30.66Q667.39-30.66 666.46-30.24L666.46-30.24L666.46-30.24Q665.54-29.82 664.58-28.42L664.58-28.42L664.58-28.42Q662.21-25.22 660.86-17.79ZM701.31 0L705.02-18.82L705.02-18.82Q703.17-36.16 696.64-39.87L696.64-39.87L696.64-39.87Q697.98-41.54 700.16-42.46L700.16-42.46L700.16-42.46Q702.34-43.39 704.96-43.39L704.96-43.39L704.96-43.39Q707.58-43.39 709.57-42.46L709.57-42.46L709.57-42.46Q711.55-41.54 712.83-39.55L712.83-39.55L712.83-39.55Q715.26-35.78 715.26-26.75L715.26-26.75L715.26-22.14L715.26-22.14Q719.10-33.41 722.94-38.27L722.94-38.27L722.94-38.27Q726.85-43.26 731.71-43.26L731.71-43.26L731.71-43.26Q733.63-43.26 734.91-42.27L734.91-42.27L734.91-42.27Q736.19-41.28 736.83-39.81L736.83-39.81L736.83-39.81Q731.90-37.63 727.17-31.36L727.17-31.36L727.17-31.36Q722.43-25.09 719.36-16.32L719.36-16.32L715.58 0L701.31 0ZM744.19 1.28L744.19 1.28L744.19 1.28Q730.11 1.28 730.11-11.97L730.11-11.97L730.11-11.97Q730.11-21.38 735.30-27.46L735.30-27.46L735.30-27.46Q740.80-33.92 750.34-33.92L750.34-33.92L750.34-33.92Q757.25-33.92 760.77-30.72L760.77-30.72L760.77-30.72Q764.29-27.52 764.29-20.80L764.29-20.80L764.29-20.80Q764.29-10.56 758.78-4.61L758.78-4.61L758.78-4.61Q753.41 1.28 744.19 1.28ZM745.86-26.56L745.86-26.56L745.86-26.56Q745.09-24.83 744.48-22.24L744.48-22.24L744.48-22.24Q743.87-19.65 743.10-15.55L743.10-15.55L743.10-15.55Q742.34-11.46 742.34-6.40L742.34-6.40L742.34-6.40Q742.34-4.74 742.88-3.65L742.88-3.65L742.88-3.65Q743.42-2.56 744.90-2.56L744.90-2.56L744.90-2.56Q746.37-2.56 747.30-3.26L747.30-3.26L747.30-3.26Q748.22-3.97 748.93-5.63L748.93-5.63L748.93-5.63Q750.21-8.58 751.23-14.05L751.23-14.05L751.23-14.05Q752.26-19.52 752.35-21.89L752.35-21.89L752.35-21.89Q752.45-24.26 752.45-26.02L752.45-26.02L752.45-26.02Q752.45-27.78 751.94-28.93L751.94-28.93L751.94-28.93Q751.42-30.08 749.98-30.08L749.98-30.08L749.98-30.08Q748.54-30.08 747.58-29.18L747.58-29.18L747.58-29.18Q746.62-28.29 745.86-26.56ZM788.61-2.69L788.61-2.69L788.61-2.69Q785.54 1.28 777.92 1.28L777.92 1.28L777.92 1.28Q773.95 1.28 771.07-1.12L771.07-1.12L771.07-1.12Q768.19-3.52 768.19-6.98L768.19-6.98L768.19-6.98Q768.19-8.90 768.38-9.86L768.38-9.86L772.67-32.64L785.66-33.92L780.99-9.22L780.99-9.22Q780.74-7.81 780.74-6.98L780.74-6.98L780.74-6.98Q780.74-3.26 782.98-3.26L782.98-3.26L782.98-3.26Q785.47-3.26 787.26-6.66L787.26-6.66L787.26-6.66Q787.84-7.74 788.10-9.15L788.10-9.15L792.64-32.64L805.25-33.92L800.51-8.96L800.51-8.96Q800.32-8 800.32-6.98L800.32-6.98L800.32-6.98Q800.32-5.95 800.90-4.83L800.90-4.83L800.90-4.83Q801.47-3.71 803.33-3.46L803.33-3.46L803.33-3.46Q802.94-1.92 801.60-0.90L801.60-0.90L801.60-0.90Q798.78 1.28 795.74 1.28L795.74 1.28L795.74 1.28Q792.70 1.28 790.91 0.19L790.91 0.19L790.91 0.19Q789.12-0.90 788.61-2.69Z" fill="url(#editing-outline-gradient)"></path></g></g><style>text {
-  font-size: 64px;
-  font-family: Arial Black;
-  dominant-baseline: central;
-  text-anchor: middle;
-}</style></svg>
-
-					<div class="col-12 text-center tamthu" style="font-size: 18pt;color: #FF1493;"
-						<p class="parse">Tớ có điều muốn nói. Ấn vào lá thư để xem nhé !</p>
-						<a href="index2.html" target="_blank"><i class="far fa-envelope lathu"
-								style="font-size: 40pt; color: #ef2a4d;"></i></a>
-					</div>
-				</div> <!-- end -->
-			</div>
-		</div>
-	</div>
-
-	<script src="javascript/charming.js"></script>
-	<script src="javascript/anime.js"></script>
-	<script src="javascript/myscript.js"></script>
-	<iframe src="./music/hihi.mp3" allow="autoplay" id="audio" style="display: none"></iframe>
-	<audio id="player" autoplay loop>
-		<source src="./music/hihi.mp3" type="audio/mp3">
-	</audio>
-<style type="text/css"> .snow-container { position: fixed; width: 100%; max-width: 100%; z-index: 99999; pointer-events: none; overflow: hidden; top: 0; height: 100%; } .snow { display: block; position: absolute; z-index: 2; top: 0; right: 0; bottom: 0; left: 0; pointer-events: none; -webkit-transform: translate3d(0,-100%,0); transform: translate3d(0,-100%,0); -webkit-animation: snow linear infinite; animation: snow linear infinite; } .snow.foreground { background-image: url("https://itexpress.vn/API/files/img/snow-medium.png"); -webkit-animation-duration: 15s; animation-duration: 10s; } .snow.foreground.layered { -webkit-animation-delay: 7.5s; animation-delay: 7.5s; } .snow.middleground { background-image: url(https://itexpress.vn/API/files/img/snow-medium.png); -webkit-animation-duration: 20s; animation-duration: 15s; } .snow.middleground.layered { -webkit-animation-delay: 10s; animation-delay: 10s; } .snow.background { background-image: url(https://itexpress.vn/API/files/img/snow-medium.png); -webkit-animation-duration: 25s; animation-duration: 20s; } .snow.background.layered { -webkit-animation-delay: 12.5s; animation-delay: 12.5s; } @-webkit-keyframes snow { 0% { -webkit-transform: translate3d(0,-100%,0); transform: translate3d(0,-100%,0); } 100% { -webkit-transform: translate3d(5%,100%,0); transform: translate3d(5%,100%,0); } } @keyframes snow { 0% { -webkit-transform: translate3d(0,-100%,0); transform: translate3d(0,-100%,0); } 100% { -webkit-transform: translate3d(5%,100%,0); transform: translate3d(5%,100%,0); } } </style> <div class='snow-container'> <div class='snow foreground'></div> <div class='snow foreground layered'></div> <div class='snow middleground'></div> <div class='snow middleground layered'></div> <div class='snow background'></div> <div class='snow background layered'></div></div>
-<!-- End Code Snow -->
- <script type="text/javascript" src="https://itexpress.vn/API/files/it.snow.js"></script>
-
-<!-- Code Snow -->
-<style type="text/css"> .snow-container { position: fixed; width: 100%; max-width: 100%; z-index: 99999; pointer-events: none; overflow: hidden; top: 0; height: 100%; } .snow { display: block; position: absolute; z-index: 2; top: 0; right: 0; bottom: 0; left: 0; pointer-events: none; -webkit-transform: translate3d(0,-100%,0); transform: translate3d(0,-100%,0); -webkit-animation: snow linear infinite; animation: snow linear infinite; } .snow.foreground { background-image: url("https://itexpress.vn/API/files/img/snow-medium.png"); -webkit-animation-duration: 15s; animation-duration: 10s; } .snow.foreground.layered { -webkit-animation-delay: 7.5s; animation-delay: 7.5s; } .snow.middleground { background-image: url(https://itexpress.vn/API/files/img/snow-medium.png); -webkit-animation-duration: 20s; animation-duration: 15s; } .snow.middleground.layered { -webkit-animation-delay: 10s; animation-delay: 10s; } .snow.background { background-image: url(https://itexpress.vn/API/files/img/snow-medium.png); -webkit-animation-duration: 25s; animation-duration: 20s; } .snow.background.layered { -webkit-animation-delay: 12.5s; animation-delay: 12.5s; } @-webkit-keyframes snow { 0% { -webkit-transform: translate3d(0,-100%,0); transform: translate3d(0,-100%,0); } 100% { -webkit-transform: translate3d(5%,100%,0); transform: translate3d(5%,100%,0); } } @keyframes snow { 0% { -webkit-transform: translate3d(0,-100%,0); transform: translate3d(0,-100%,0); } 100% { -webkit-transform: translate3d(5%,100%,0); transform: translate3d(5%,100%,0); } } </style> <div class='snow-container'> <div class='snow foreground'></div> <div class='snow foreground layered'></div> <div class='snow middleground'></div> <div class='snow middleground layered'></div> <div class='snow background'></div> <div class='snow background layered'></div></div>
-<!-- End Code Snow -->
- <script type="text/javascript" src="https://itexpress.vn/API/files/it.snow.js"></script>
-
-<!-- Code Snow -->
-<style type="text/css"> .snow-container { position: fixed; width: 100%; max-width: 100%; z-index: 99999; pointer-events: none; overflow: hidden; top: 0; height: 100%; } .snow { display: block; position: absolute; z-index: 2; top: 0; right: 0; bottom: 0; left: 0; pointer-events: none; -webkit-transform: translate3d(0,-100%,0); transform: translate3d(0,-100%,0); -webkit-animation: snow linear infinite; animation: snow linear infinite; } .snow.foreground { background-image: url("https://itexpress.vn/API/files/img/snow-medium.png"); -webkit-animation-duration: 15s; animation-duration: 10s; } .snow.foreground.layered { -webkit-animation-delay: 7.5s; animation-delay: 7.5s; } .snow.middleground { background-image: url(https://itexpress.vn/API/files/img/snow-medium.png); -webkit-animation-duration: 20s; animation-duration: 15s; } .snow.middleground.layered { -webkit-animation-delay: 10s; animation-delay: 10s; } .snow.background { background-image: url(https://itexpress.vn/API/files/img/snow-medium.png); -webkit-animation-duration: 25s; animation-duration: 20s; } .snow.background.layered { -webkit-animation-delay: 12.5s; animation-delay: 12.5s; } @-webkit-keyframes snow { 0% { -webkit-transform: translate3d(0,-100%,0); transform: translate3d(0,-100%,0); } 100% { -webkit-transform: translate3d(5%,100%,0); transform: translate3d(5%,100%,0); } } @keyframes snow { 0% { -webkit-transform: translate3d(0,-100%,0); transform: translate3d(0,-100%,0); } 100% { -webkit-transform: translate3d(5%,100%,0); transform: translate3d(5%,100%,0); } } </style> <div class='snow-container'> <div class='snow foreground'></div> <div class='snow foreground layered'></div> <div class='snow middleground'></div> <div class='snow middleground layered'></div> <div class='snow background'></div> <div class='snow background layered'></div></div>
-<!-- End Code Snow -->
- <script type="text/javascript" src="https://itexpress.vn/API/files/it.snow.js"></script>
+        /*
+        * Settings
+        */
+         var settings = {
+           particles: {
+             length:   1000, // maximum amount of particles
+             duration:   2, // particle duration in sec
+             velocity: 100, // particle velocity in pixels/sec
+             effect: -0.75, // play with this for a nice effect
+             size:      30, // particle size in pixels
+           },
+         };
+         /*
+          * RequestAnimationFrame polyfill by Erik Möller
+          */
+         (function(){var b=0;var c=["ms","moz","webkit","o"];for(var a=0;a<c.length&&!window.requestAnimationFrame;++a){window.requestAnimationFrame=window[c[a]+"RequestAnimationFrame"];window.cancelAnimationFrame=window[c[a]+"CancelAnimationFrame"]||window[c[a]+"CancelRequestAnimationFrame"]}if(!window.requestAnimationFrame){window.requestAnimationFrame=function(h,e){var d=new Date().getTime();var f=Math.max(0,16-(d-b));var g=window.setTimeout(function(){h(d+f)},f);b=d+f;return g}}if(!window.cancelAnimationFrame){window.cancelAnimationFrame=function(d){clearTimeout(d)}}}());
+         /*
+          * Point class
+          */
+         var Point = (function() {
+           function Point(x, y) {
+             this.x = (typeof x !== 'undefined') ? x : 0;
+             this.y = (typeof y !== 'undefined') ? y : 0;
+           }
+           Point.prototype.clone = function() {
+             return new Point(this.x, this.y);
+           };
+           Point.prototype.length = function(length) {
+             if (typeof length == 'undefined')
+               return Math.sqrt(this.x * this.x + this.y * this.y);
+             this.normalize();
+             this.x *= length;
+             this.y *= length;
+             return this;
+           };
+           Point.prototype.normalize = function() {
+             var length = this.length();
+             this.x /= length;
+             this.y /= length;
+             return this;
+           };
+           return Point;
+         })();
+         /*
+          * Particle class
+          */
+         var Particle = (function() {
+           function Particle() {
+             this.position = new Point();
+             this.velocity = new Point();
+             this.acceleration = new Point();
+             this.age = 0;
+           }
+           Particle.prototype.initialize = function(x, y, dx, dy) {
+             this.position.x = x;
+             this.position.y = y;
+             this.velocity.x = dx;
+             this.velocity.y = dy;
+             this.acceleration.x = dx * settings.particles.effect;
+             this.acceleration.y = dy * settings.particles.effect;
+             this.age = 0;
+           };
+           Particle.prototype.update = function(deltaTime) {
+             this.position.x += this.velocity.x * deltaTime;
+             this.position.y += this.velocity.y * deltaTime;
+             this.velocity.x += this.acceleration.x * deltaTime;
+             this.velocity.y += this.acceleration.y * deltaTime;
+             this.age += deltaTime;
+           };
+           Particle.prototype.draw = function(context, image) {
+             function ease(t) {
+               return (--t) * t * t + 1;
+             }
+             var size = image.width * ease(this.age / settings.particles.duration);
+             context.globalAlpha = 1 - this.age / settings.particles.duration;
+             context.drawImage(image, this.position.x - size / 2, this.position.y - size / 2, size, size);
+           };
+           return Particle;
+         })();
+         /*
+          * ParticlePool class
+          */
+         var ParticlePool = (function() {
+           var particles,
+                   firstActive = 0,
+                   firstFree   = 0,
+                   duration    = settings.particles.duration;
+           function ParticlePool(length) {
+             // create and populate particle pool
+             particles = new Array(length);
+             for (var i = 0; i < particles.length; i++)
+               particles[i] = new Particle();
+           }
+           ParticlePool.prototype.add = function(x, y, dx, dy) {
+             particles[firstFree].initialize(x, y, dx, dy);
+             // handle circular queue
+             firstFree++;
+             if (firstFree   == particles.length) firstFree   = 0;
+             if (firstActive == firstFree       ) firstActive++;
+             if (firstActive == particles.length) firstActive = 0;
+           };
+           ParticlePool.prototype.update = function(deltaTime) {
+             var i;
+             // update active particles
+             if (firstActive < firstFree) {
+               for (i = firstActive; i < firstFree; i++)
+                 particles[i].update(deltaTime);
+             }
+             if (firstFree < firstActive) {
+               for (i = firstActive; i < particles.length; i++)
+                 particles[i].update(deltaTime);
+               for (i = 0; i < firstFree; i++)
+                 particles[i].update(deltaTime);
+             }
+             // remove inactive particles
+             while (particles[firstActive].age >= duration && firstActive != firstFree) {
+               firstActive++;
+               if (firstActive == particles.length) firstActive = 0;
+             }
+           };
+           ParticlePool.prototype.draw = function(context, image) {
+             // draw active particles
+             if (firstActive < firstFree) {
+               for (i = firstActive; i < firstFree; i++)
+                 particles[i].draw(context, image);
+             }
+             if (firstFree < firstActive) {
+               for (i = firstActive; i < particles.length; i++)
+                 particles[i].draw(context, image);
+               for (i = 0; i < firstFree; i++)
+                 particles[i].draw(context, image);
+             }
+           };
+           return ParticlePool;
+         })();
+         /*
+          * Putting it all together
+          */
+         (function(canvas) {
+           var context = canvas.getContext('2d'),
+                   particles = new ParticlePool(settings.particles.length),
+                   particleRate = settings.particles.length / settings.particles.duration, // particles/sec
+                   time;
+           // get point on heart with -PI <= t <= PI
+           function pointOnHeart(t) {
+             return new Point(
+                     160 * Math.pow(Math.sin(t), 3),
+                     130 * Math.cos(t) - 50 * Math.cos(2 * t) - 20 * Math.cos(3 * t) - 10 * Math.cos(4 * t) + 25
+             );
+           }
+           // creating the particle image using a dummy canvas
+           var image = (function() {
+             var canvas  = document.createElement('canvas'),
+                     context = canvas.getContext('2d');
+             canvas.width  = settings.particles.size;
+             canvas.height = settings.particles.size;
+             // helper function to create the path
+             function to(t) {
+               var point = pointOnHeart(t);
+               point.x = settings.particles.size / 2 + point.x * settings.particles.size / 350;
+               point.y = settings.particles.size / 2 - point.y * settings.particles.size / 350;
+               return point;
+             }
+             // create the path
+             context.beginPath();
+             var t = -Math.PI;
+             var point = to(t);
+             context.moveTo(point.x, point.y);
+             while (t < Math.PI) {
+               t += 0.01; // baby steps!
+               point = to(t);
+               context.lineTo(point.x, point.y);
+             }
+             context.closePath();
+             // create the fill
+             context.fillStyle = '#ea80b0';
+             context.fill();
+             // create the image
+             var image = new Image();
+             image.src = canvas.toDataURL();
+             return image;
+           })();
+           // render that thing!
+           function render() {
+             // next animation frame
+             requestAnimationFrame(render);
+             // update time
+             var newTime   = new Date().getTime() / 1000,
+                     deltaTime = newTime - (time || newTime);
+             time = newTime;
+             // clear canvas
+             context.clearRect(0, 0, canvas.width, canvas.height);
+             // create new particles
+             var amount = particleRate * deltaTime;
+             for (var i = 0; i < amount; i++) {
+               var pos = pointOnHeart(Math.PI - 2 * Math.PI * Math.random());
+               var dir = pos.clone().length(settings.particles.velocity);
+               particles.add(canvas.width / 2 + pos.x, canvas.height / 2 - pos.y, dir.x, -dir.y);
+             }
+             // update and draw particles
+             particles.update(deltaTime);
+       
+             particles.draw(context, image);
+           }
+           // handle (re-)sizing of the canvas
+           function onResize() {
+             canvas.width  = canvas.clientWidth;
+             canvas.height = canvas.clientHeight;
+           }
+           window.onresize = onResize;
+           // delay rendering bootstrap
+           setTimeout(function() {
+             onResize();
+             render();
+           }, 10);
+         })(document.getElementById('pinkboard'));
+    </script>
+ 
+</body>
 </html>
